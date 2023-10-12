@@ -1,0 +1,4 @@
+/* In your styles.css or a separate CSS/SCSS file */
+.hidden-header {
+  display: none;
+}

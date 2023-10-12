@@ -1,4 +1,4 @@
-<header class="container mx-auto sticky top-0">
+<header class="md:container md:mx-auto mx-auto sticky top-0">
   <!-- Navbar -->
   <nav class="relative w-full flex justify-between px-3 bg-cyan-500">
     <!-- Hamburger Menu -->
@@ -12,19 +12,21 @@
     </a>
 
     <!-- Navigation -->
-    <div class="capitalize text-xl flex gap-x-10">
-      <a href="#">Social Media Icons</a>
+    <div class="flex gap-x-10 text-white mt-1 text-2xl">
+      <span>Luis Samboy</span>
+      <span class="w-6 h-6 rounded-full bg-white"></span>
     </div>
   </nav>
 
   <!-- Menu -->
   <div
-    class="absolute container h-screen bg-gray-400/90 flex flex-col items-center justify-center text-6xl text-white gap-y-7 z-10 scale-x-0 duration-200 origin-left"
+    class="absolute container h-screen w-2/3 min-w-fit bg-zinc-900/90 flex flex-col justify-evenly py-10 px-10 text-3xl text-gray-300 gap-y-7 z-10 scale-x-0 duration-500 ease-in-out origin-left group"
     [ngClass]="{ 'scale-x-0': !menuVisible }"
   >
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Contact</a>
+    <a href="#" class="group/item hover:text-white">Home</a>
+    <a href="#" class="group/item hover:text-white">About</a>
+    <a href="#" class="group/item hover:text-white">Portfolio</a>
+    <a href="#" class="group/item hover:text-white">Contact</a>
+    <a href="#" class="group/item hover:text-white justify-self-end">Social</a>
   </div>
 </header>
