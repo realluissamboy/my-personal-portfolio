@@ -2,3 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .text-primary {
+        @apply text-gray-300/90;
+    }
+
+    .text-secondary {
+        @apply text-white;
+    }
+}

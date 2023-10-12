@@ -1,4 +1,12 @@
 import { Component } from '@angular/core';
+import {
+  faInstagram,
+  faYoutube,
+  faTiktok,
+  faWhatsapp,
+  faMeta,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +15,12 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   menuVisible = false;
+  faInstagram = faInstagram;
+  faYoutube = faYoutube;
+  faTiktok = faTiktok;
+  faWhatsapp = faWhatsapp;
+  faMeta = faMeta;
+  faLinkedin = faLinkedin;
 
   showHideMenu() {
     this.menuVisible = !this.menuVisible;

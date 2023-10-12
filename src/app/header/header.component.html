@@ -1,18 +1,18 @@
-<header class="md:container md:mx-auto mx-auto sticky top-0">
+<header class="md:container md:mx-auto mx-auto sticky top-0 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]">
   <!-- Navbar -->
-  <nav class="relative w-full flex justify-between px-3 bg-cyan-500">
+  <nav class="relative w-full flex justify-between px-3 bg-sky-600 pt-1">
     <!-- Hamburger Menu -->
     <a href="#" class="text-3xl z-20" (click)="showHideMenu()">
       <ng-container *ngIf="!menuVisible; else closeIcon">
         <i class="material-icons">menu</i>
       </ng-container>
       <ng-template #closeIcon>
-        <i class="material-icons">close</i>
+        <i class="material-icons ">close</i>
       </ng-template>
     </a>
 
     <!-- Navigation -->
-    <div class="flex gap-x-10 text-white mt-1 text-2xl">
+    <div class="flex gap-x-10 text-secondary mt-1 text-3xl">
       <span>Luis Samboy</span>
       <span class="w-6 h-6 rounded-full bg-white"></span>
     </div>
@@ -20,12 +20,31 @@
 
   <!-- Menu -->
   <div
-    class="absolute container h-screen w-2/3 min-w-fit bg-zinc-900/90 flex flex-col justify-evenly py-10 px-10 text-3xl text-gray-300 gap-y-7 z-10 scale-x-0 duration-300 ease-out origin-left group"
+    class="absolute container h-screen w-2/3 min-w-fit bg-sky-950/90 flex flex-col justify-evenly py-10 px-10 text-3xl text-primary gap-y-7 z-10 scale-x-0 duration-300 ease-out origin-left group shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
     [ngClass]="{ 'scale-x-0': !menuVisible }">
-    <a href="#" class="group/item hover:text-white">Home</a>
-    <a href="#" class="group/item hover:text-white">About</a>
-    <a href="#" class="group/item hover:text-white">Portfolio</a>
-    <a href="#" class="group/item hover:text-white">Contact</a>
-    <a href="#" class="group/item hover:text-white justify-self-end">Social</a>
+    <a href="#" class="group/item hover:text-secondary">Home</a>
+    <a href="#" class="group/item hover:text-secondary">About</a>
+    <a href="#" class="group/item hover:text-secondary">Portfolio</a>
+    <a href="#" class="group/item hover:text-secondary">Contact</a>
+    <div class="flex flex-wrap space-x-4">
+      <a href="https://www.instagram.com/realluissamboy"><fa-icon [icon]="faInstagram"
+          class="group/item hover:text-white"></fa-icon></a>
+      <a href="https://www.youtube.com/realluissamboy"><fa-icon [icon]="faYoutube"
+          class="group/item hover:text-white"></fa-icon>
+      </a>
+      <a href="https://www.tiktok.com/@realluissamboy?_t=8gSbq3hni50&_r=1"><fa-icon [icon]="faTiktok"
+          class="group/item hover:text-white"></fa-icon>
+      </a>
+      <a href="https://wa.me/16198312725"><fa-icon [icon]="faWhatsapp" class="group/item hover:text-white"></fa-icon>
+      </a>
+      <a href="https://www.facebook.com/realluissamboy"><fa-icon [icon]="faMeta"
+          class="group/item hover:text-white"></fa-icon>
+      </a>
+      <a href="https://www.linkedin.com/in/realluissamboy"><fa-icon [icon]="faLinkedin"
+          class="group/item hover:text-white"></fa-icon>
+      </a>
+    </div>
   </div>
+
+
 </header>
