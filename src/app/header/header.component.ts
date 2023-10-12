@@ -6,6 +6,7 @@ import {
   faWhatsapp,
   faMeta,
   faLinkedin,
+  faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -21,6 +22,7 @@ export class HeaderComponent {
   faWhatsapp = faWhatsapp;
   faMeta = faMeta;
   faLinkedin = faLinkedin;
+  faGithub = faGithub;
 
   showHideMenu() {
     this.menuVisible = !this.menuVisible;
