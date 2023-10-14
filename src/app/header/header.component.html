@@ -1,6 +1,6 @@
-<header class="md:container md:mx-auto mx-auto sticky top-0 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]">
+<header class="sticky top-0 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] bg-white">
   <!-- Navbar -->
-  <nav class="relative w-full flex justify-between px-3 bg-sky-600 pt-1">
+  <nav class="relative flex justify-between px-3 bg-sky-600 pt-1">
     <!-- Hamburger Menu -->
     <a href="#" class="text-3xl z-20" (click)="showHideMenu()">
       <ng-container *ngIf="!menuVisible; else closeIcon">
@@ -25,11 +25,8 @@
     <a href="#" class="group/item hover:text-secondary">Home</a>
     <a href="#" class="group/item hover:text-secondary">About</a>
     <a href="#" class="group/item hover:text-secondary">Portfolio</a>
-    <a href="#" class="group/item hover:text-secondary">Contact</a>
-    <div class="flex flex-wrap space-x-4">
-      <a href="https://www.github.com/realluissamboy"><fa-icon [icon]="faGithub"
-          class="group/item hover:text-white"></fa-icon>
-      </a>
+    <p class="flex flex-wrap space-x-4">
+
       <a href="https://www.instagram.com/realluissamboy"><fa-icon [icon]="faInstagram"
           class="group/item hover:text-white"></fa-icon></a>
       <a href="https://www.youtube.com/realluissamboy"><fa-icon [icon]="faYoutube"
@@ -38,17 +35,30 @@
       <a href="https://www.tiktok.com/@realluissamboy?_t=8gSbq3hni50&_r=1"><fa-icon [icon]="faTiktok"
           class="group/item hover:text-white"></fa-icon>
       </a>
-      <a href="https://www.linkedin.com/in/realluissamboy"><fa-icon [icon]="faLinkedin"
-          class="group/item hover:text-white"></fa-icon>
+      <a href="https://www.twitter.com/realluissamboy">
+        <fa-icon [icon]="faXTwitter" class="group/item hover:text-white"></fa-icon>
       </a>
 
-      <a href="https://wa.me/16198312725"><fa-icon [icon]="faWhatsapp" class="group/item hover:text-white"></fa-icon>
-      </a>
-      <a href="https://www.facebook.com/realluissamboy"><fa-icon [icon]="faMeta"
-          class="group/item hover:text-white"></fa-icon>
+      <a href="https://www.github.com/realluissamboy">
+        <fa-icon [icon]="faGithub" class="group/item hover:text-white"></fa-icon>
       </a>
 
-    </div>
+      <a href="https://www.linkedin.com/in/realluissamboy">
+        <fa-icon [icon]="faLinkedin" class="group/item hover:text-white"></fa-icon>
+      </a>
+
+      <a href="https://wa.me/+16198312725">
+        <fa-icon [icon]="faWhatsapp" class="group/item hover:text-white"></fa-icon>
+      </a>
+      <a href="https://discordapp.com/users/realluisamboy">
+        <fa-icon [icon]="faDiscord" class="group/item hover:text-white"></fa-icon>
+      </a>
+      <a href="https://telegram.me/realluissamboy">
+        <fa-icon [icon]="faTelegram" class="group/item hover:text-white"></fa-icon>
+      </a>
+
+
+    </p>
   </div>
 
 
