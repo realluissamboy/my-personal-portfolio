@@ -7,7 +7,7 @@
         <i class="material-icons">menu</i>
       </ng-container>
       <ng-template #closeIcon>
-        <i class="material-icons ">close</i>
+        <i class="material-icons">close</i>
       </ng-template>
     </a>
 
@@ -24,10 +24,11 @@
     [ngClass]="{ 'scale-x-0': !menuVisible }">
     <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="group/item hover:text-secondary"
       (click)="onMenuItemClick()">Home</a>
-    <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page"
-      class="group/item hover:text-secondary" (click)="onMenuItemClick()">About</a>
     <a routerLink="/portfolio" routerLinkActive="active" ariaCurrentWhenActive="page"
       class="group/item hover:text-secondary" (click)="onMenuItemClick()">Portfolio</a>
+    <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page"
+      class="group/item hover:text-secondary" (click)="onMenuItemClick()">About</a>
+
     <p class="flex flex-wrap space-x-4">
 
       <a href="https://www.instagram.com/realluissamboy"><fa-icon [icon]="faInstagram"
