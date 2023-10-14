@@ -3,32 +3,27 @@ import {
   faInstagram,
   faYoutube,
   faTiktok,
+  faXTwitter,
   faGithub,
   faLinkedin,
   faWhatsapp,
-  faXTwitter,
   faDiscord,
   faTelegram,
 } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: 'header.component.html',
-  styleUrls: ['header.component.css'],
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css'],
 })
-export class HeaderComponent {
-  menuVisible = false;
+export class FooterComponent {
   faInstagram = faInstagram;
   faYoutube = faYoutube;
   faTiktok = faTiktok;
+  faXTwitter = faXTwitter;
   faGithub = faGithub;
   faLinkedin = faLinkedin;
   faWhatsapp = faWhatsapp;
-  faXTwitter = faXTwitter;
   faDiscord = faDiscord;
   faTelegram = faTelegram;
-
-  showHideMenu() {
-    this.menuVisible = !this.menuVisible;
-  }
 }
