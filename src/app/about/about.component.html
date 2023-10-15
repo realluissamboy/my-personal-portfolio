@@ -1,55 +1,27 @@
-<div class="sm:flex sm:items-center sm:justify-center">
-    <div class="w-48 pt-5 sm:max-w-xs">
-        <img src="https://www.dropbox.com/scl/fi/psotiw81fcbwh4exzodww/6b0613a3-74fa-483e-9680-ff89c058e216.png?rlkey=544wsu295d8dzilpum9z987it&raw=1"
-            class="rounded-lg ">
-    </div>
-    <div class="mt-4 sm:max-w-md sm:pl-4">
-        <h2>Welcome!</h2>
-        <p>
-            Hello, and thank you for stopping by to get to know me a little better!
-        </p>
-        <h2>🚀 Professionally Speaking…</h2>
-        <p>
-            I’m a dedicated Full Stack Software Engineer, specializing in web application development. My portfolio
-            showcases a
-            myriad of projects, reflecting a wealth of experience gleaned from working with some of the world’s renowned
-            companies
-            like Verizon, Zillow, and the New York Times.</p>
-        <h2>👨‍👩‍👧 A Peek into My Personal World…
-        </h2>
-        <p>
-            Off the tech scene, I'm a devoted husband and father. My journey has been diverse and enriching, from
-            serving in the
-            United States Marine Corps to navigating B2B sales for major corporations. These varied experiences not only
-            make me
-            versatile but also equip me with insights into the diverse challenges you might be encountering.</p>
-        <h2>✈️ Wanderlust at Heart…
-        </h2>
-        <p>
-            My love for traveling has taken me to over a dozen countries, entailed adventures like hitchhiking from
-            Paris to
-            Marrakech, and even involved living in Airbnbs throughout the US for over two years. Every journey has been
-            a chapter,
-            adding to my story and expanding my worldview.</p>
+<div class="flex flex-col items-center justify-center min-h-screen">
+    <div class="flex items-center">
+        <button (click)="prevBox()" [disabled]="currentIndex === 0" class="bg-blue-500 text-white p-2 m-2">
+            Prev
+        </button>
 
-        <h2>🎓 Educational and Professional Credentials…
-        </h2>
-        <p>
-            I hold a BS in Business Administration from Berkeley College, NYC, and a Certificate in Software Engineering
-            from
-            Fullstack Academy. I’ve also earned real estate sales licenses in three states, weaving a rich tapestry of
-            skills and
-            knowledge that I bring to my work.</p>
-        <h2>📍 Home and Heart in San Diego...
-        </h2>
-        <p>
-            Although San Diego is my base, you’ll often find me in New York City, immersing myself in its vibrant
-            energy. When I'm
-            not on the move, I’m cheering for my favorite teams - the New York Jets and the San Diego Padres, keeping
-            the spirit of
-            both coasts alive!
-        </p>
+        <div *ngFor="let box of boxes; let i = index" [ngClass]="{'hidden': i !== currentIndex}"
+            class="border-4 border-white border-solid w-64 h-96 p-4 flex flex-col items-center justify-center m-2">
+            <h1 class="text-xl font-bold mb-4">{{box.title}}</h1>
+            <p class="text-green-500">{{box.content}}</p>
+        </div>
 
+        <button (click)="nextBox()" [disabled]="currentIndex === boxes.length - 1"
+            class="bg-blue-500 text-white p-2 m-2">
+            Next
+        </button>
     </div>
 
+    <div class="flex space-x-2 mt-4">
+        <ng-container *ngFor="let box of boxes; let i = index">
+            <div
+                [class]="i === currentIndex ? 'w-4 h-4 bg-blue-700 rounded-full' : 'w-4 h-4 bg-slate-400 rounded-full'">
+            </div>
+
+        </ng-container>
+    </div>
 </div>
