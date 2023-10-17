@@ -3,7 +3,8 @@
     style="background-image: url(https://www.dropbox.com/scl/fi/bviunug46q4as910jmx2y/1a4fed9a-1543-43ba-beac-573019109750.png?rlkey=xod04yoey3il9vyrnsep5y8dv&raw=1)">
 
     <!-- Central flexbox with white translucent background -->
-    <div class="flex items-center justify-center pb-40 bg-white bg-opacity-70 w-full">
+    <div
+        class="flex items-center justify-center pb-40 bg-white dark:bg-stone-950/50 dark:text-white bg-opacity-70 w-full">
 
         <!-- Previous button, disabled when at the first box -->
         <button (click)="prevBox()" [disabled]="currentIndex === 0"
@@ -19,14 +20,14 @@
             <div class="flex space-x-2 mt-4 justify-center">
                 <ng-container *ngFor="let box of boxes; let i = index">
                     <div
-                        [class]="i === currentIndex ? 'w-4 h-4 bg-orange-400 rounded-full shadow-inner shadow-slate-950 animate-bounce duration-150' : 'w-4 h-4 bg-slate-200 rounded-full shadow-inner shadow-slate-950'">
+                        [class]="i === currentIndex ? 'w-4 h-4 bg-orange-400 rounded-full shadow-inner shadow-slate-950 dark:shadow-black animate-bounce duration-150' : 'w-4 h-4 bg-slate-200 rounded-full shadow-inner shadow-slate-950 dark:shadow-black'">
                     </div>
                 </ng-container>
             </div>
 
             <!-- Box title and content -->
             <h1 class="text-xl font-bold mb-4">{{box.title}}</h1>
-            <p class="text-black">{{box.content}}</p>
+            <p class="text-black dark:text-white dark:font-bold">{{box.content}}</p>
         </div>
 
         <!-- Next button, disabled when at the last box -->
