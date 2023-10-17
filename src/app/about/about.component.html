@@ -1,28 +1,38 @@
-<div class="sm:flex sm:items-center sm:justify-center">
-    <div class="w-48 pt-5 sm:max-w-xs">
-        <img src="https://www.dropbox.com/scl/fi/psotiw81fcbwh4exzodww/6b0613a3-74fa-483e-9680-ff89c058e216.png?rlkey=544wsu295d8dzilpum9z987it&raw=1"
-            class="rounded-lg ">
-    </div>
-    <div class="mt-4 sm:max-w-md sm:pl-4">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio provident odit vel exercitationem, nemo itaque
-        magni repellendus cupiditate? Totam odit quas accusamus tenetur eveniet voluptatibus quo deserunt animi ad
-        corporis.
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio provident odit vel exercitationem, nemo
-            itaque
-            magni repellendus cupiditate? Totam odit quas accusamus tenetur eveniet voluptatibus quo deserunt animi ad
-            corporis.</p>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio provident odit vel exercitationem, nemo
-            itaque
-            magni repellendus cupiditate? Totam odit quas accusamus tenetur eveniet voluptatibus quo deserunt animi ad
-            corporis.</p>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio provident odit vel exercitationem, nemo
-            itaque
-            magni repellendus cupiditate? Totam odit quas accusamus tenetur eveniet voluptatibus quo deserunt animi ad
-            corporis.</p>
+<!-- Main container with background image and flex properties -->
+<div class="flex flex-col items-center justify-end min-h-screen bg-center bg-no-repeat bg-cover"
+    style="background-image: url(https://www.dropbox.com/scl/fi/bviunug46q4as910jmx2y/1a4fed9a-1543-43ba-beac-573019109750.png?rlkey=xod04yoey3il9vyrnsep5y8dv&raw=1)">
 
-    </div>
+    <!-- Central flexbox with white translucent background -->
+    <div class="flex items-center justify-center pb-40 bg-white bg-opacity-70 w-full">
 
+        <!-- Previous button, disabled when at the first box -->
+        <button (click)="prevBox()" [disabled]="currentIndex === 0"
+            class="bg-blue-500 hover:scale-110 active:bg-blue-700 shadow-xl active:shadow-lg active:scale-90 active:duration-150 shadow-blue-500/50 text-white p-2 m-2 text-2xl rounded-md">
+            &lt;
+        </button>
+
+        <!-- Box display, loops over each box and only shows the one with matching index -->
+        <div *ngFor="let box of boxes; let i = index" [ngClass]="{'hidden': i !== currentIndex}"
+            class="w-full h-64 p-2 m-2 text-center">
+
+            <!-- Pagination dots indicating the current box -->
+            <div class="flex space-x-2 mt-4 justify-center">
+                <ng-container *ngFor="let box of boxes; let i = index">
+                    <div
+                        [class]="i === currentIndex ? 'w-4 h-4 bg-orange-400 rounded-full shadow-inner shadow-slate-950 animate-bounce duration-150' : 'w-4 h-4 bg-slate-200 rounded-full shadow-inner shadow-slate-950'">
+                    </div>
+                </ng-container>
+            </div>
+
+            <!-- Box title and content -->
+            <h1 class="text-xl font-bold mb-4">{{box.title}}</h1>
+            <p class="text-black">{{box.content}}</p>
+        </div>
+
+        <!-- Next button, disabled when at the last box -->
+        <button (click)="nextBox()" [disabled]="currentIndex === boxes.length - 1"
+            class="bg-blue-500 hover:scale-110 active:bg-blue-700 shadow-xl active:shadow-lg active:scale-90 active:duration-150 shadow-blue-500/50 text-white p-2 m-2 text-2xl rounded-md">
+            &gt;
+        </button>
+    </div>
 </div>
